@@ -12,11 +12,11 @@ public class HomePagePOM extends BasePOM {
 
 	// WebElements
 	//Search Box
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//input[@id='twotabsearchtextbox']")
 	WebElement searchBox;
 	
 	//Search Icon
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//input[@id='nav-search-submit-button']")
 	WebElement searchIcon;
 	
 	
