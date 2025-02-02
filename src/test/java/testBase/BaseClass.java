@@ -21,7 +21,7 @@ public class BaseClass {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://www.amazon.in/");
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		
 	}
 	

@@ -86,9 +86,9 @@ public class SearchResultsPagePOM extends BasePOM{
 
 
 	
-	public void priceSelection() {
-		goButton.click();
-	}
+//	public void priceSelection() {
+//		goButton.click();
+//	}
 	
 	public void costumerRatings() {
 		custRatings.click();

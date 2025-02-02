@@ -17,12 +17,12 @@ public class TaskOne extends BaseClass {
 	public void test() throws Exception {
 		try {
 		TestPOM tp = new TestPOM(driver);
-		tp.enterName("Camera");
+		tp.enterName("camera");
 		tp.click();
 		
 		SearchResultsPagePOM spm = new SearchResultsPagePOM(driver);
 		spm.brandWithC();
-		spm.priceSelection();
+		//spm.priceSelection();
 		spm.costumerRatings();
 		
 		Boolean products = spm.resultProducts();
