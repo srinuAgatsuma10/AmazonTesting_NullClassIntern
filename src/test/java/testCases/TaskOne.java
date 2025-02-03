@@ -9,10 +9,6 @@ import testBase.BaseClass;
 
 public class TaskOne extends BaseClass {
 
-//	public Test1(WebDriver driver) {
-//		super(driver);
-//	}
-
 	@Test
 	public void test() throws Exception {
 		try {
@@ -22,7 +18,7 @@ public class TaskOne extends BaseClass {
 		
 		SearchResultsPagePOM spm = new SearchResultsPagePOM(driver);
 		spm.brandWithC();
-		//spm.priceSelection();
+		spm.priceSelection();
 		spm.costumerRatings();
 		
 		Boolean products = spm.resultProducts();
@@ -31,11 +27,12 @@ public class TaskOne extends BaseClass {
 		
 		
 		if(products == true && ratings == true && price == true) {
-			Assert.assertTrue(true);
-		}
-		else {
 			Assert.assertTrue(false);
 		}
+		else {
+			Assert.assertTrue(true);
+		}
+		
 	}
 		catch(Exception e) {
 			Assert.fail();

@@ -50,45 +50,35 @@ public class SearchResultsPagePOM extends BasePOM{
 	// Action Methods
 	
 	public void brandWithC() {
-	    Set<String> selectedBrands = new HashSet<>(); // Store already selected brands
-	    
+	    Set<String> selectedBrands = new HashSet<>(); 
 	    while (true) {
-	        seeMore.click(); // Click seeMore button
-	        
-	        List<WebElement> brands = brandWithC; // Re-fetch elements after clicking seeMore
+	        seeMore.click(); 
+	        List<WebElement> brands = brandWithC; 
 	        boolean foundNewBrand = false;
-	        
 	        for (WebElement brandC : brands) {
 	            String bC = brandC.getText();
 	            if (bC.startsWith("C") && !selectedBrands.contains(bC)) {
-	                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", brandC); // Ensure visibility
-	                brandC.click(); // Click on the brand
-	                selectedBrands.add(bC); // Add to selected list
+	                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", brandC);
+	                brandC.click();
+	                selectedBrands.add(bC); 
 	                foundNewBrand = true;
-	                
-	                // Wait for the page to stabilize
 	                try {
-	                    Thread.sleep(1000); // Adjust as needed for stability
+	                    Thread.sleep(1000); 
 	                } catch (InterruptedException e) {
 	                    e.printStackTrace();
 	                }
-	                break; // Break to restart loop to refresh elements
+	                break; 
 	            }
 	        }
-	        
-	        // If no new brand was found, exit the loop
 	        if (!foundNewBrand) {
 	            break;
 	        }
 	    }
 	}
 
-
-
-	
-//	public void priceSelection() {
-//		goButton.click();
-//	}
+	public void priceSelection() {
+		goButton.click();
+	}
 	
 	public void costumerRatings() {
 		custRatings.click();
@@ -97,41 +87,39 @@ public class SearchResultsPagePOM extends BasePOM{
 	
 	//Validation Action Methods
 	public Boolean resultProducts() {
-		for(WebElement resPro : resultProductsDesc) {
-			String rePo = resPro.getText();
-			if(rePo.contains("Camera")){
-				return true;
-			}
-			else {
-				System.out.println("No Products found");
-			}
-		}
-		return null;
+	    for (WebElement resPro : resultProductsDesc) {
+	        String rePo = resPro.getText();
+	        if (rePo.contains("Camera")) {
+	            return true; 
+	        }
+	    }
+	    System.out.println("No Products found"); 
+	    return false;
 	}
+	
 	
 	public Boolean resProRating() {
 		for(WebElement resRate : resultProductsRatings) {
-			if(resRate.isEnabled()) {
-				return (resRate.isDisplayed());
+			if(resRate.isDisplayed()) {
+				return true;
 			}
 			
-		}return null;
+		}return false;
 	}
 	
 	public Boolean productPrice() {
-		for(WebElement price : resultProductPrice) {
-			int proPrice = Integer.parseInt(price.getText());
-			if(proPrice >= 100) {
-				return (price.isDisplayed());
-			}else {
-				return false;
-			}
-		}
-	return null;	
-	}
+        for (WebElement price : resultProductPrice) {
+            try {
+                int proPrice = Integer.parseInt(price.getText().replaceAll("[^0-9]", ""));
+                if (proPrice > 2000) {
+                    return true;
+                }
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
+    }
 	
-	
-	
-	
-		
+			
 }
