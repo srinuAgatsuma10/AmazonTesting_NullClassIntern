@@ -1,40 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-04T20:45:55 IST" name="Default suite" finished-at="2025-02-04T20:47:27 IST" duration-ms="92479">
+  <suite started-at="2025-02-05T19:03:28 IST" name="Default suite" finished-at="2025-02-05T19:05:10 IST" duration-ms="101834">
     <groups>
     </groups>
-    <test started-at="2025-02-04T20:45:55 IST" name="Default test" finished-at="2025-02-04T20:47:27 IST" duration-ms="92479">
-      <class name="testCases.TaskOne">
-        <test-method signature="getMthod()[pri:1, instance:testCases.TaskOne@44e3a2b2]" started-at="2025-02-04T20:45:55 IST" name="getMthod" finished-at="2025-02-04T20:47:27 IST" duration-ms="92385" status="PASS">
+    <test started-at="2025-02-05T19:03:28 IST" name="Default test" finished-at="2025-02-05T19:05:10 IST" duration-ms="101834">
+      <class name="testCases.TaskTwo">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TaskTwo@36ebc363]" started-at="2025-02-05T19:03:29 IST" name="setUp" finished-at="2025-02-05T19:05:10 IST" duration-ms="101226" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getMthod -->
-        <test-method signature="navigateToMethod()[pri:2, instance:testCases.TaskOne@44e3a2b2]" started-at="2025-02-04T20:47:27 IST" name="navigateToMethod" finished-at="2025-02-04T20:47:27 IST" duration-ms="15" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
+        </test-method> <!-- setUp -->
+        <test-method signature="searchingProducts()[pri:0, instance:testCases.TaskTwo@36ebc363]" started-at="2025-02-05T19:05:10 IST" name="searchingProducts" finished-at="2025-02-05T19:05:10 IST" duration-ms="19" status="FAIL">
+          <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, get {url=https://www.amazon.in}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASUS\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62648/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}]]>
+              <![CDATA[Test can only run between 3 PM and 6 PM]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, get {url=https://www.amazon.in}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASUS\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62648/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:151)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
-at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1090)
-at testCases.TaskOne.navigateToMethod(TaskOne.java:18)
+              <![CDATA[java.lang.RuntimeException: Test can only run between 3 PM and 6 PM
+at testCases.TaskTwo.searchingProducts(TaskTwo.java:21)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -63,11 +47,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigateToMethod -->
-      </class> <!-- testCases.TaskOne -->
+        </test-method> <!-- searchingProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TaskTwo@36ebc363]" started-at="2025-02-05T19:05:10 IST" name="tearDown" finished-at="2025-02-05T19:05:10 IST" duration-ms="500" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TaskTwo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

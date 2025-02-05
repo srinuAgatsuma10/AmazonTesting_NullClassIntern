@@ -1,5 +1,7 @@
 package testCases;
 
+import java.time.LocalTime;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,6 +12,15 @@ import testBase.BaseClass;
 public class TaskTwo extends BaseClass {
 	@Test
 	public void searchingProducts() throws Exception {
+		
+		 LocalTime currentTime = LocalTime.now();
+		 LocalTime start = LocalTime.of(15, 0); 
+		 LocalTime end = LocalTime.of(18, 0); 
+
+		 if (currentTime.isBefore(start) || currentTime.isAfter(end)) {
+			 throw new RuntimeException("Test can only run between 3 PM and 6 PM");
+		   }
+		
 		try {
 		HomePagePOM hp = new HomePagePOM(driver);
 		hp.enterProduct("camera");
