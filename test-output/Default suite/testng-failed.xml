@@ -5,9 +5,7 @@
     <classes>
       <class name="testCases.TaskOne">
         <methods>
-          <include name="test"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
+          <include name="navigateToMethod"/>
         </methods>
       </class> <!-- testCases.TaskOne -->
     </classes>

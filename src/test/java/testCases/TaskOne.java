@@ -1,41 +1,21 @@
 package testCases;
-
-import org.testng.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import pageObjects.SearchResultsPagePOM;
-import pageObjects.TestPOM;
-import testBase.BaseClass;
-
-public class TaskOne extends BaseClass {
-
-	@Test
-	public void test() throws Exception {
-		try {
-		TestPOM tp = new TestPOM(driver);
-		tp.enterName("camera");
-		tp.click();
-		
-		SearchResultsPagePOM spm = new SearchResultsPagePOM(driver);
-		spm.brandWithC();
-		spm.priceSelection();
-		spm.costumerRatings();
-		
-		Boolean products = spm.resultProducts();
-		Boolean ratings = spm.resProRating();
-		Boolean price = spm.productPrice();
-		
-		
-		if(products == true && ratings == true && price == true) {
-			Assert.assertTrue(false);
-		}
-		else {
-			Assert.assertTrue(true);
-		}
-		
+public class TaskOne {
+	WebDriver driver = new ChromeDriver();
+	
+	@Test(priority = 1)
+	public void getMthod()throws Exception {
+		driver.get("https://www.amazon.in");
+		driver.navigate().back();
 	}
-		catch(Exception e) {
-			Assert.fail();
-		}
+	
+	@Test(priority = 2)
+	public void navigateToMethod()throws Exception  {
+		driver.navigate().to("https://www.amazon.in");
+		Thread.sleep(3000);
+		driver.refresh();
 	}
 }
