@@ -2,6 +2,7 @@ package pageObjects;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -120,6 +121,24 @@ public class SearchResultsPagePOM extends BasePOM{
         }
         return false;
     }
+	
+	public void clickRandomProduct() {
+		try {
+			if(resultProductsDesc.size()>0) {
+				Random random = new Random();
+				int randomIndex = random.nextInt(resultProductsDesc.size()); 
+				
+				// Select the product
+				WebElement clickProduct = resultProductsDesc.get(randomIndex);
+				clickProduct.click();
+			}
+			else {
+				System.out.println("No products found on the page.");
+			}
+			}catch(Exception e) {
+				e.getMessage();
+			}
+	}
 	
 			
 }

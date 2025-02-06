@@ -19,8 +19,17 @@ public class HomePagePOM extends BasePOM {
 	@FindBy(xpath = "//input[@id='nav-search-submit-button']")
 	WebElement searchIcon;
 	
+	// SignIn
+	@FindBy(xpath = "//a[@id='nav-link-accountList']")
+	WebElement signInBtn;
+	
 	
 	// Action Methods
+	
+	public void clickSignIn() {
+		signInBtn.click();
+	}
+	
 	public void enterProduct(String name){
 		try {
 		if(searchBox.isEnabled()) {
