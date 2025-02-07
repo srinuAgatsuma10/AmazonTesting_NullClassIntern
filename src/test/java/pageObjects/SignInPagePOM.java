@@ -14,45 +14,46 @@ public class SignInPagePOM extends BasePOM {
 	// Email Input field
 	@FindBy(xpath = "//input[@id='ap_email']")
 	WebElement emailBox;
-	
+
 	// continue button
 	@FindBy(xpath = "//input[@id='continue']")
 	WebElement continueBtn;
-	
-	//Password button
+
+	// Password button
 	@FindBy(xpath = "//input[@id='ap_password']")
 	WebElement passwordBtn;
-	
-	//SignIn Button
+
+	// SignIn Button
 	@FindBy(xpath = "//input[@id='signInSubmit']")
 	WebElement signInButton;
-	
-	//Password button
+
+	// Password button
 	@FindBy(xpath = "//input[@id='input-box-otp']")
 	WebElement otpInputBox;
-		
-	//SignIn Button
+
+	// SignIn Button
 	@FindBy(xpath = "//input[@aria-labelledby='cvf-submit-otp-button-announce']")
 	WebElement submitCode;
-	
-	
+
 	// Action methods
 	public void enterEmial(String email) {
 		emailBox.sendKeys(email);
-		
+
 	}
+
 	public void clickContinuue() {
 		continueBtn.click();
 	}
-	
+
 	public void enterPassword(String pass) {
 		passwordBtn.sendKeys(pass);
-		
+
 	}
+
 	public void clickSignInBtn() {
 		signInButton.click();
 	}
-	
+
 	public void enterOTP() throws Exception {
 		Thread.sleep(30000);
 		submitCode.click();

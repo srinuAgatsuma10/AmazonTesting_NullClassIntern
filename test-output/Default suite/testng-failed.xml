@@ -8,6 +8,7 @@
           <include name="addToCart"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="signIntoApplication"/>
         </methods>
       </class> <!-- testCases.TaskFour -->
     </classes>
