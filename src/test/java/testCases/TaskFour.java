@@ -14,18 +14,22 @@ public class TaskFour extends BaseClass {
 		hp.clickSignIn();
 
 		SignInPagePOM sip = new SignInPagePOM(driver);
-		sip.enterEmial("thethundergod2025@gmail.com");
+		sip.enterEmial(prop.getProperty("workingEmail1"));
 		sip.clickContinuue();
-		sip.enterPassword("Allow@me");
+		sip.enterPassword(prop.getProperty("workingPassword"));
 		sip.clickSignInBtn();
 //		sip.enterOTP();
 	}
 
 	@Test
 	public void addToCart() throws Exception {
+
+		BaseClass bc = new BaseClass();
+		bc.sixToSevenPMTime();
+
 		try {
 			HomePagePOM hp = new HomePagePOM(driver);
-			hp.enterProduct("Headphones");
+			hp.enterProduct(prop.getProperty("productName2"));
 			hp.clickSearchIcon();
 
 			SearchResultsPagePOM spm = new SearchResultsPagePOM(driver);
