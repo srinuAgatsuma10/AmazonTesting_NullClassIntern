@@ -8,24 +8,24 @@ import testBase.BaseClass;
 
 public class TaskFour extends BaseClass {
 
-//	@BeforeClass
-//	public void signIntoApplication() throws Exception {
-//		HomePagePOM hp = new HomePagePOM(driver);
-//		hp.clickSignIn();
-//
-//		SignInPagePOM sip = new SignInPagePOM(driver);
-//		sip.enterEmial(prop.getProperty("workingEmail1"));
-//		sip.clickContinuue();
-//		sip.enterPassword(prop.getProperty("workingPassword"));
-//		sip.clickSignInBtn();
+	@BeforeClass
+	public void signIntoApplication() throws Exception {
+		HomePagePOM hp = new HomePagePOM(driver);
+		hp.clickSignIn();
+
+		SignInPagePOM sip = new SignInPagePOM(driver);
+		sip.enterEmial(prop.getProperty("workingEmail1"));
+		sip.clickContinuue();
+		sip.enterPassword(prop.getProperty("workingPassword"));
+		sip.clickSignInBtn();
 //		sip.enterOTP();
-//	}
+	}
 
 	@Test
 	public void addToCart() throws Exception {
 
-//		BaseClass bc = new BaseClass();
-//		bc.sixToSevenPMTime();
+		BaseClass bc = new BaseClass();
+		bc.sixToSevenPMTime();
 
 		try {
 			HomePagePOM hp = new HomePagePOM(driver);
@@ -43,6 +43,8 @@ public class TaskFour extends BaseClass {
 				winH.Handling2windows(isLasInteration);
 
 			}
+
+			hp.logoButton();
 
 			spm.cilcATCbtn();
 

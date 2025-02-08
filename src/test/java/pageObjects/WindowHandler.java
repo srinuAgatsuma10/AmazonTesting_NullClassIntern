@@ -39,5 +39,19 @@ public class WindowHandler extends BasePOM {
 			System.out.println("Driver is in Parent window");
 		}
 	}
+	
+	public void changingWindow() {
+		Set<String> windows = driver.getWindowHandles();
+		System.out.println("Id's of current windows: " + windows);
+
+		List<String> winid = new ArrayList(windows);
+		String parent = winid.get(0);
+		String child = winid.get(1);
+		driver.switchTo().window(child);
+	}
+	
+	public void closingCurrentWindow() {
+		driver.close();
+	}
 
 }

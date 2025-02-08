@@ -30,9 +30,9 @@ public class SearchResultsPagePOM extends BasePOM {
 	@FindBy(xpath = "//ul[@data-csa-c-content-id=\"91049095031\"]//li//span[@class=\"a-list-item\"]")
 	List<WebElement> brandWithC;
 
-	// Add to cart Button
-	@FindBy(xpath = "//span[@class='nav-cart-icon nav-sprite']")
-	WebElement addToCartBtn;
+	// Add to cart Button 
+	@FindBy(xpath = "//a[@id='nav-cart']")
+	WebElement addToCartBtn;//span[@class='nav-cart-icon nav-sprite']
 
 	/* //Price Details */
 	@FindBy(xpath = "//label[@aria-label='Minimum']")

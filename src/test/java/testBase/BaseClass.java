@@ -6,6 +6,7 @@ import java.time.Duration;
 import java.time.LocalTime;
 import java.util.Properties;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -70,4 +71,5 @@ public class BaseClass {
 			throw new RuntimeException("Test can only run between 12 PM and 3 PM");
 		}
 	}
+	
 }
