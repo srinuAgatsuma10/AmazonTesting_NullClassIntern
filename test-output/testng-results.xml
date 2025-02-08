@@ -2,20 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-07T07:48:25 IST" name="Default suite" finished-at="2025-02-07T07:51:25 IST" duration-ms="180294">
+  <suite started-at="2025-02-07T22:06:38 IST" name="Default suite" finished-at="2025-02-07T22:08:29 IST" duration-ms="111441">
     <groups>
     </groups>
-    <test started-at="2025-02-07T07:48:25 IST" name="Default test" finished-at="2025-02-07T07:51:25 IST" duration-ms="180294">
+    <test started-at="2025-02-07T22:06:38 IST" name="Default test" finished-at="2025-02-07T22:08:29 IST" duration-ms="111441">
       <class name="testCases.TaskFour">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TaskFour@385c9627]" started-at="2025-02-07T07:48:25 IST" name="setUp" finished-at="2025-02-07T07:48:42 IST" duration-ms="16952" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TaskFour@3c41ed1d]" started-at="2025-02-07T22:06:38 IST" name="setUp" finished-at="2025-02-07T22:06:43 IST" duration-ms="5547" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="signIntoApplication()[pri:0, instance:testCases.TaskFour@385c9627]" started-at="2025-02-07T07:48:42 IST" name="signIntoApplication" finished-at="2025-02-07T07:48:53 IST" duration-ms="11271" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signIntoApplication -->
-        <test-method signature="addToCart()[pri:0, instance:testCases.TaskFour@385c9627]" started-at="2025-02-07T07:48:53 IST" name="addToCart" finished-at="2025-02-07T07:51:24 IST" duration-ms="151100" status="FAIL">
+        <test-method signature="addToCart()[pri:0, instance:testCases.TaskFour@3c41ed1d]" started-at="2025-02-07T22:06:43 IST" name="addToCart" finished-at="2025-02-07T22:08:28 IST" duration-ms="104827" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -24,7 +20,7 @@
               <![CDATA[java.lang.AssertionError: null
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.fail(Assert.java:116)
-at testCases.TaskFour.addToCart(TaskFour.java:68)
+at testCases.TaskFour.addToCart(TaskFour.java:76)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -57,7 +53,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TaskFour@385c9627]" started-at="2025-02-07T07:51:24 IST" name="tearDown" finished-at="2025-02-07T07:51:25 IST" duration-ms="906" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TaskFour@3c41ed1d]" started-at="2025-02-07T22:08:28 IST" name="tearDown" finished-at="2025-02-07T22:08:29 IST" duration-ms="983" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

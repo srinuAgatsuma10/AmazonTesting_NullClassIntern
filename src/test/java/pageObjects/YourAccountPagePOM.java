@@ -11,12 +11,16 @@ public class YourAccountPagePOM extends BasePOM {
 	}
 
 	// Login and Security
-	@FindBy(xpath = "//span[@id='sc-subtotal-amount-activecart']//span[@class='a-size-medium a-color-base sc-price sc-white-space-nowrap']")
+	@FindBy(xpath = "//div[@data-card-identifier='SignInAndSecurity']//div[@class='a-box-inner']")
 	WebElement totalCartPrice;
 
 	// UserName
-	@FindBy(xpath = "//span[@id='sc-subtotal-amount-activecart']//span[@class='a-size-medium a-color-base sc-price sc-white-space-nowrap']")
+	@FindBy(xpath = "//span[@id='NAME_SUBTITLE']")
 	WebElement userName;
+
+	// User Email
+	@FindBy(xpath = "//span[@id='EMAIL_SUBTITLE']")
+	WebElement userEmail;
 
 	public void clickLogAndSecurity() {
 		totalCartPrice.click();
@@ -27,4 +31,22 @@ public class YourAccountPagePOM extends BasePOM {
 		return name.length() == 10 && name.chars().allMatch(Character::isLetterOrDigit);
 	}
 
+	public String validateUserEmail() {
+		// String email;
+		return (userEmail.getText());
+	}
+
+	public boolean forbcharInUserName() {
+		String name = "Thunder Storm";
+		char[] nameArr = name.toCharArray();
+		char[] forbiddenCharArr = { 'A', 'C', 'G', 'I', 'L', 'K' };
+		for (int i = 0; i < nameArr.length; i++) {
+			for (int j = 0; j < forbiddenCharArr.length; j++) {
+				if (nameArr[i] == forbiddenCharArr[j]) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
 }

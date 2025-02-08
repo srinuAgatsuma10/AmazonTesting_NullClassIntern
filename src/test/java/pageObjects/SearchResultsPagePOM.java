@@ -1,5 +1,6 @@
 package pageObjects;
 
+import java.time.Duration;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
@@ -9,12 +10,18 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SearchResultsPagePOM extends BasePOM {
 
 	public SearchResultsPagePOM(WebDriver driver) {
 		super(driver);
 	}
+	
+	
+	//Explicit Wait
+		WebDriverWait myWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	// WebElements
 	/* //Brand Details */
@@ -23,8 +30,8 @@ public class SearchResultsPagePOM extends BasePOM {
 	@FindBy(xpath = "//ul[@data-csa-c-content-id=\"91049095031\"]//li//span[@class=\"a-list-item\"]")
 	List<WebElement> brandWithC;
 
-	// Addto cart Btton
-	@FindBy(xpath = "//input[@id='add-to-cart-button']")
+	// Add to cart Button
+	@FindBy(xpath = "//span[@class='nav-cart-icon nav-sprite']")
 	WebElement addToCartBtn;
 
 	/* //Price Details */
@@ -141,7 +148,9 @@ public class SearchResultsPagePOM extends BasePOM {
 	}
 
 	public void cilcATCbtn() {
-		addToCartBtn.click();
+		WebElement cartBtnClick = myWait.until(ExpectedConditions.elementToBeClickable(addToCartBtn));
+		cartBtnClick.click();
+		
 	}
 
 }

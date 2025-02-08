@@ -22,6 +22,10 @@ public class HomePagePOM extends BasePOM {
 	// SignIn
 	@FindBy(xpath = "//a[@id='nav-link-accountList']")
 	WebElement signInBtn;
+	
+	// Navigate to account list
+	@FindBy(xpath = "//span[@id='nav-link-accountList-nav-line-1']")
+	WebElement navToAcc;
 
 	// Action Methods
 
@@ -41,5 +45,9 @@ public class HomePagePOM extends BasePOM {
 
 	public void clickSearchIcon() {
 		searchIcon.click();
+	}
+	
+	public void navigateToAccList() {
+		navToAcc.click();
 	}
 }
