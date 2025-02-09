@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-08T22:48:05 IST" name="Default suite" finished-at="2025-02-08T22:49:55 IST" duration-ms="109557">
+  <suite started-at="2025-02-09T07:53:11 IST" name="Default suite" finished-at="2025-02-09T07:53:48 IST" duration-ms="37161">
     <groups>
     </groups>
-    <test started-at="2025-02-08T22:48:05 IST" name="Default test" finished-at="2025-02-08T22:49:55 IST" duration-ms="109557">
+    <test started-at="2025-02-09T07:53:11 IST" name="Default test" finished-at="2025-02-09T07:53:48 IST" duration-ms="37161">
       <class name="testCases.TaskThree">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TaskThree@40a4337a]" started-at="2025-02-08T22:48:05 IST" name="setUp" finished-at="2025-02-08T22:48:24 IST" duration-ms="18258" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TaskThree@40a4337a]" started-at="2025-02-09T07:53:11 IST" name="setUp" finished-at="2025-02-09T07:53:15 IST" duration-ms="4187" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="priceDropEmail()[pri:0, instance:testCases.TaskThree@40a4337a]" started-at="2025-02-08T22:48:24 IST" name="priceDropEmail" finished-at="2025-02-08T22:49:55 IST" duration-ms="90937" status="FAIL">
+        <test-method signature="priceDropEmail()[pri:0, instance:testCases.TaskThree@40a4337a]" started-at="2025-02-09T07:53:15 IST" name="priceDropEmail" finished-at="2025-02-09T07:53:47 IST" duration-ms="32005" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -20,7 +20,7 @@
               <![CDATA[java.lang.AssertionError: null
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.fail(Assert.java:116)
-at testCases.TaskThree.priceDropEmail(TaskThree.java:54)
+at testCases.TaskThree.priceDropEmail(TaskThree.java:55)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -53,7 +53,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- priceDropEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TaskThree@40a4337a]" started-at="2025-02-08T22:49:55 IST" name="tearDown" finished-at="2025-02-08T22:49:55 IST" duration-ms="327" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TaskThree@40a4337a]" started-at="2025-02-09T07:53:47 IST" name="tearDown" finished-at="2025-02-09T07:53:48 IST" duration-ms="898" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
