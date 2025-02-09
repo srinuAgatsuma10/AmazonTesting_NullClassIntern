@@ -2,7 +2,7 @@
 <Configuration status="WARN">
 
 	<Properties>
-		<Property name="basePath">./Logs</Property>
+		<Property name="basePath">./logs</Property>
 	</Properties>
 
   <Appenders>
@@ -18,7 +18,7 @@
     
   </Appenders>
   <Loggers>
-    <Root level="Off">  <!-- Here you can use multiple log levels   All < Trace < Debug < Info < Warn < Error < Fatal < Off -->
+    <Root level="Info">  <!-- Here you can use multiple log levels   All < Trace < Debug < Info < Warn < Error < Fatal < Off -->
       <AppenderRef ref="File"/>         
       <!--  <AppenderRef ref="Console"/>   -->
     </Root>

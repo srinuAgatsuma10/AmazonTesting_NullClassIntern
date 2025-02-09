@@ -1,25 +1,29 @@
 package testBase;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.Properties;
 
-
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class BaseClass {
 
 	public WebDriver driver;
 	public Properties prop;
-
-//	public BaseClass(WebDriver driver) {
-//		this.driver = driver;
-//	}
+	public Logger logger;
 
 	@BeforeClass
 	public void setUp() throws IOException {
@@ -28,6 +32,8 @@ public class BaseClass {
 		FileReader file = new FileReader("./src//test//resources//config.properties");
 		prop = new Properties();
 		prop.load(file);
+
+		logger = LogManager.getLogger(this.getClass());
 
 		driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
@@ -71,5 +77,21 @@ public class BaseClass {
 			throw new RuntimeException("Test can only run between 12 PM and 3 PM");
 		}
 	}
-	
+
+	// Capturing Screen Shot
+	public String captureScreen(String tname) throws IOException {
+
+		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date(0));
+
+		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+
+		String targetFilePath = System.getProperty("user.dir") + "\\screenshots\\" + tname + "_" + timeStamp + ".png";
+		File targetFile = new File(targetFilePath);
+
+		sourceFile.renameTo(targetFile);
+
+		return targetFilePath;
+
+	}
 }

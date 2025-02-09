@@ -18,10 +18,9 @@ public class SearchResultsPagePOM extends BasePOM {
 	public SearchResultsPagePOM(WebDriver driver) {
 		super(driver);
 	}
-	
-	
-	//Explicit Wait
-		WebDriverWait myWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	// Explicit Wait
+	WebDriverWait myWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	// WebElements
 	/* //Brand Details */
@@ -30,9 +29,9 @@ public class SearchResultsPagePOM extends BasePOM {
 	@FindBy(xpath = "//ul[@data-csa-c-content-id=\"91049095031\"]//li//span[@class=\"a-list-item\"]")
 	List<WebElement> brandWithC;
 
-	// Add to cart Button 
+	// Add to cart Button
 	@FindBy(xpath = "//a[@id='nav-cart']")
-	WebElement addToCartBtn;//span[@class='nav-cart-icon nav-sprite']
+	WebElement addToCartBtn;
 
 	/* //Price Details */
 	@FindBy(xpath = "//label[@aria-label='Minimum']")
@@ -58,7 +57,6 @@ public class SearchResultsPagePOM extends BasePOM {
 	List<WebElement> resultProductPrice;
 
 	// Action Methods
-
 	public void brandWithC() {
 		Set<String> selectedBrands = new HashSet<>();
 		while (true) {
@@ -150,7 +148,7 @@ public class SearchResultsPagePOM extends BasePOM {
 	public void cilcATCbtn() {
 		WebElement cartBtnClick = myWait.until(ExpectedConditions.elementToBeClickable(addToCartBtn));
 		cartBtnClick.click();
-		
+
 	}
 
 }

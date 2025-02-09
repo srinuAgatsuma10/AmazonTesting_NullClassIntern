@@ -18,7 +18,6 @@ public class ProductDisplayPagePOM extends BasePOM {
 	@FindBy(xpath = "//span[@id='productTitle']")
 	WebElement proDesc;
 
-	
 	public int productPrice() {
 		String price = proPrice.getText().substring(0);
 		int priceOnly = Integer.parseInt(price);
@@ -26,11 +25,11 @@ public class ProductDisplayPagePOM extends BasePOM {
 	}
 
 	public String productDescription() {
-		return(proDesc.getText());
+		return (proDesc.getText());
 	}
 
 	public String currentUlr() {
-		return(driver.getCurrentUrl());
+		return (driver.getCurrentUrl());
 	}
 
 }
